@@ -7,4 +7,4 @@
 
     - name: Printing uptime
       ansible.bulitin.debug:
-        msg: "uptime is {{OUT.stdout}}"
+        msg: "uptime is {{OUT}}"
