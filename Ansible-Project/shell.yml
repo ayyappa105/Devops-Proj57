@@ -1,7 +1,7 @@
 - name: Demo of using shell with ansible
   hosts: all
   tasks:
-    - name: Running uptime
+    - name: run uptime command
       ansible.bulitin.shell: uptime
       register: OUT
 
