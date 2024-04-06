@@ -2,9 +2,9 @@
   hosts: all
   tasks:
     - name: Runninguptime 
-       ansible.bulitin.shell: uptime
-       register: OUT
+      ansible.bulitin.shell: uptime
+      register: OUT
 
     - name: Printing uptime
-       ansible.bulitin.debug:
+      ansible.bulitin.debug:
         msg: "uptime is {{OUT.stdout}}"
