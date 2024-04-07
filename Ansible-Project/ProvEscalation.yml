@@ -1,0 +1,8 @@
+- name: Creating user
+  hosts: all
+  beacome: true
+  tasks:
+   - name: Creating the user
+     ansible.builtin.user:
+      name: testuser
+    become_user: true
