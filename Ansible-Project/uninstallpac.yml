@@ -1,0 +1,7 @@
+- name: Uninstall the package
+  hosts: all
+  tasks:
+   - name: Unistalling the package
+     ansible.builtin.package
+       name: nginx
+       state: absent
