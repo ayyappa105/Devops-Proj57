@@ -2,6 +2,6 @@
   hosts: all
   tasks:
    - name: Printing the OS distro
-     ansible_builtin_debug:
+     ansible.builtin.debug:
        msg: OS distro is {{ansible_distribution}}
      when: {{ansible_distribution}} == "Ubuntu"
