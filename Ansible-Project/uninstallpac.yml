@@ -2,6 +2,6 @@
   hosts: all
   tasks:
    - name: Unistalling the package
-     ansible.builtin.package
-       name: nginx
-       state: absent
+     ansible.builtin.package:
+        name: nginx
+        state: absent
