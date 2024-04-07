@@ -4,4 +4,4 @@
    - name: Printing the OS distro
      ansible.builtin.debug:
        msg: OS distro is {{ansible_distribution}}
-     when: {{ansible_distribution}} == "Centos"
+     when: ansible_distribution == "Centos"
