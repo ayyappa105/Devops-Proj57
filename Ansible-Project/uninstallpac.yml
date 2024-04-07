@@ -1,5 +1,6 @@
 - name: Uninstall the package
   hosts: all
+  become: true
   tasks:
    - name: Unistalling the package
      ansible.builtin.package:
