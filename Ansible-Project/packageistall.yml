@@ -1,5 +1,6 @@
 - name: Package installation demo
   hosts: all
+  become: true
   tasks: 
    - name: Installing the Package
      ansible.builtin.package:
