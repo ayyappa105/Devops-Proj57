@@ -5,4 +5,3 @@
    - name: Creating the user
      ansible.builtin.user:
        name: testuser
-    become_user: true
