@@ -1,4 +1,4 @@
 - name: Role based playbook
   become: true
   roles:
-    role: frontend
+    - role: frontend
