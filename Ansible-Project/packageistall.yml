@@ -3,10 +3,11 @@
   become: true
   tasks: 
    - name: Installing the Package
-     ansible.builtin.debug:
      ansible.builtin.package:
        name: nginx
        state: present
+      ansible.builtin.debug:
+        msg: {{package}}
 
    - name: Installing multiple packages
      ansible.builtin.package:
