@@ -6,7 +6,7 @@
      ansible.builtin.package:
        name: nginx
        state: present
-      ansible.builtin.debug:
+     ansible.builtin.debug:
         msg: {{package}}
 
    - name: Installing multiple packages
