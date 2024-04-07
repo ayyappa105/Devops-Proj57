@@ -1,0 +1,7 @@
+- name: Vars ansible
+  hosts: all
+  vars:
+   URL: ansible.check.com
+   -name: URL Printing
+    ansible.builtin.debug:
+     msg: "Ansible url is {{URL}}"
