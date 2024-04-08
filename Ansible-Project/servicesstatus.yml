@@ -1,4 +1,4 @@
-- name: gathering the bullikaya
+- name: gathering the servicefacts
   hosts: all
   tasks:
    - name: gathering the facts
