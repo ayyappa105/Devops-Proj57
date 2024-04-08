@@ -2,6 +2,6 @@
   hosts: all
   tasks:
    - name: gathering the facts
-      set_facts: yes
+     set_facts: yes
       
   
