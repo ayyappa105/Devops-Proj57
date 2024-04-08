@@ -1,7 +1,7 @@
 - name: gathering the bullikaya
   hosts: all
   tasks:
-    - name: gathering the facts
+   - name: gathering the facts
       set_facts: true
       
   
