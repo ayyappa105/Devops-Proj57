@@ -6,7 +6,7 @@
 
    - name: pritning the service status
      ansible.builtin.debug:
-       msg: "{{ ansible_facts.services }}"
+       msg: "{{ansible_facts.services}}"
      when: ansible_facts.services.state == 'running'
 
   
