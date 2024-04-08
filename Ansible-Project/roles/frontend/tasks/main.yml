@@ -1,4 +1,4 @@
 - name: Installing the Package
   ansible.builtin.package:
     name: nginx
-    state: present
+    state: ansible_distribution
