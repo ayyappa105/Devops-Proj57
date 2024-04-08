@@ -7,8 +7,7 @@
    - name: pritning the service status
      ansible.builtin.debug:
        msg: "{{ ansible_facts.services | dict2items 
-          | selectattr('value.state', '==', 'running') | items2dict }}"
-
+          | selectattr('value.state', '==', 'running') | map(attribute='key') }}"
   
        
   
