@@ -4,7 +4,7 @@
 - name: Installing the Nodejs on {{COMPONENT}}
   ansible.builtin.dnf:
     name: nodejs
-    status: installed
+    state: installed
 
 - name: Creating the the user on {{COMPONENT}}
   ansible.builtin.user:
