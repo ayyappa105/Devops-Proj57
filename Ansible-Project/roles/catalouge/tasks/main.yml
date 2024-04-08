@@ -8,7 +8,7 @@
 
 - name: Creating the the user on {{COMPONENT}}
   ansible.builtin.user:
-    name: {{APPUSER}}
+    name: "{{APPUSER}}"
 
 - name: Copy and extract the file on remote machine
   ansible.builtin.unarchive:
