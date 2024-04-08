@@ -6,8 +6,8 @@
 
    - name: pritning the service status
      ansible.builtin.debug:
-       msg: "{{ansible_facts.services}}"
-     #when: ansible_facts.services.state == 'running'
+       msg: "{{ ansible_facts.services | dict2items 
+          | selectattr('value.state', '==', 'running') | items2dict }}"
 
   
        
