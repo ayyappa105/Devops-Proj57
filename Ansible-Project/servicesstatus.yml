@@ -3,6 +3,5 @@
   tasks:
     - name: gathering the facts
       set_facts: true
-      ansible.builtin.debug:
       
   
