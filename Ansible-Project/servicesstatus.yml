@@ -3,6 +3,8 @@
   tasks:
    - name: gathering the facts
      service_facts:
+
+   - name: pritning the service status
      ansible.builtin.debug:
        msg: "{{state}}"
   
