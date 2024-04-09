@@ -1,10 +1,15 @@
 - name: gathering the kernal
   hosts: all
+  become: true
   gather_facts: true
   tasks:
    - name: kernal version
      ansible.builtin.debug:
-       msg: "{{ansible_kernel}}"
+       msg: "{{item}}"
+     with_item:
+     - "{{ansible_distribution}}"
+     - "{{ansible_distribution_version}}"
+     - "{{ansible_kernel}}"
       
     - name: checking kernel updates
       ansible.builtin.command: yum check-update
