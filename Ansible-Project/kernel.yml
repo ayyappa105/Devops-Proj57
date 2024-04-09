@@ -7,7 +7,6 @@
       prompt: "Security updates are available. Update all packages (y/N)?"
       default: n
   tasks:
-
    - name: kernal version
      ansible.builtin.debug:
        msg: OS version is {{ansible_distribution}}.{{ansible_distribution_version}} and kernal version is {{ansible_kernel}}
