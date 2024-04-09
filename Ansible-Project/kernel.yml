@@ -9,5 +9,5 @@
       
    - name: checking kernel updates
      ansible.builtin.yum:
-       list: updates update_cache=true
-       register: yumoutput
+       list: updates
+     register: result
