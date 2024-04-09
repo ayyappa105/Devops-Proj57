@@ -16,7 +16,7 @@
      ansible.builtin.debug:
        msg: "{{ yumoutput | json_query(my_query) }}"
      vars:
-       my_query: "results[].[name, version, repo]"
+       my_query: "results[].[name: name, version: version, repo: repo]"
    
 
    
