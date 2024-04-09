@@ -10,4 +10,4 @@
    - name: checking kernel updates
      ansible.builtin.command: 
        cmd: yum check-update
-       remote_src: yes
+       
