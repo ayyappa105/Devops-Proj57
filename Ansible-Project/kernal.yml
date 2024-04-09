@@ -1,5 +1,6 @@
 - name: gathering the kernal
   hosts: all
+  gather_facts: true
   tasks:
    - name: kernal version
      ansible.builtin.debug:
