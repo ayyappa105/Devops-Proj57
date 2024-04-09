@@ -3,9 +3,10 @@
   become: true
   gather_facts: true
   tasks:
-   - pause:
-      prompt: "Do you want to install mariadb (yes/no)?"
-     register: my_pause
+   vars_prompt:
+    - name: update_confirmation
+      prompt: "Security updates are available. Update all packages (y/N)?"
+      default: n
 
    - name: kernal version
      ansible.builtin.debug:
@@ -24,9 +25,9 @@
 
    - name: checking kernel updates
      ansible.builtin.yum:
-       list: updates
-       state: present
-       when: my_pause.user_input | bool
+       name: *
+       state: latest
+       when: update_confirmation == "y"
     
    
 
