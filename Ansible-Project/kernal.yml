@@ -1,0 +1,5 @@
+- name: gathering the kernal
+  hosts: all
+  tasks:
+   - name: kernal version
+     ansible.builtin.debug:
