@@ -5,7 +5,7 @@
   tasks:
    - name: kernal version
      ansible.builtin.debug:
-       msg: "{{item}}"
+       msg: "{{ item }}"
      with_item:
      - "{{ansible_distribution}}"
      - "{{ansible_distribution_version}}"
