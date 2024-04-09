@@ -14,6 +14,11 @@
 
    - name: Listing the yum updates
      ansible.builtin.debug:
-       msg: "{{yumoutput.results}}" 
+       msg: "{{ yumoutput.results | map(attribute='name') | list }}" 
+    
+   - name: Listing the yum updates
+     ansible.builtin.debug:
+       msg: "{{ yumoutput.results | map(attribute='version') | list }}"
+   
 
    
