@@ -12,5 +12,5 @@
      - "{{ansible_kernel}}"
       
    - name: checking kernel updates
-      ansible.builtin.command: yum check-update
-      remote_src: yes
+     ansible.builtin.command: yum check-update
+     remote_src: yes
