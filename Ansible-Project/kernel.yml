@@ -6,7 +6,7 @@
    - name: update_confirmation
      prompt: "Security updates are available. Update all packages (y/N)?"
      default: n
-     private: no
+     
   tasks:
    - name: kernal version
      ansible.builtin.debug:
