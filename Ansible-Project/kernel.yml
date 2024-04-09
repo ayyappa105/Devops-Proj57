@@ -3,7 +3,7 @@
   become: true
   gather_facts: true
   tasks:
-   vars_prompt:
+  vars_prompt:
     - name: update_confirmation
       prompt: "Security updates are available. Update all packages (y/N)?"
       default: n
