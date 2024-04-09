@@ -24,7 +24,7 @@
 
    - name: checking kernel updates
      ansible.builtin.yum:
-       name: *
+       name: '*'
        state: latest
        when: update_confirmation == "y"
     
