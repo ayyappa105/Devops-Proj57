@@ -31,13 +31,15 @@
         - mysql
         - php
         - mysql
-       state: latest
+       state: present
      when: update_confirmation == "y"
      register: package_result
 
    - name: Current packages are getting installing
      ansible.builtin.debug:
-       msg: Kernal updates are getting installing {{package_result.results | list }}
+       msg: Kernal updates are getting installing {{package_result.results | json_query(my_query) }}
+     vars:
+       my_query: "results[].{Installed: Installed}"
     
    
 
