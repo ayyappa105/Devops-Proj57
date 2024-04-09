@@ -27,6 +27,10 @@
        name: '*'
        state: latest
      when: update_confirmation == "y"
+
+   - name: Current packages are getting installing
+     ansible.builtin.debug:
+       msg: "{{ yum.stdout }}"
     
    
 
