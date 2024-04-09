@@ -5,3 +5,7 @@
    - name: kernal version
      ansible.builtin.debug:
        msg: "{{ansible_kernel}}"
+      
+    - name: checking kernel updates
+      ansible.builtin.command: yum check-update
+      remote_server: yes
