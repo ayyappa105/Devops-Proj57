@@ -4,8 +4,8 @@
   gather_facts: true
   vars_prompt:
    - name: update_confirmation
-      prompt: "Security updates are available. Update all packages (y/N)?"
-      default: n
+     prompt: "Security updates are available. Update all packages (y/N)?"
+     default: n
   tasks:
    - name: kernal version
      ansible.builtin.debug:
