@@ -8,6 +8,5 @@
        msg: OS version is {{ansible_distribution}}.{{ansible_distribution_version}} and kernal version is {{ansible_kernel}}
       
    - name: checking kernel updates
-     ansible.builtin.command: 
-      cmd: yum check-update
+     ansible.builtin.command: yum check-update
       remote_src: yes
