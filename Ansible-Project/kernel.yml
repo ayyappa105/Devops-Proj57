@@ -14,7 +14,7 @@
 
    - name: Listing the yum updates
      ansible.builtin.debug:
-       msg: "{{ yumoutput.results | json_query(my_query) }}"
+       msg: "{{ yumoutput | json_query(my_query) }}"
      vars:
        my_query: "results[].[name, repo]"
    
