@@ -26,7 +26,7 @@
      ansible.builtin.yum:
        name: '*'
        state: latest
-       when: update_confirmation == "y"
+     when: update_confirmation == "y"
     
    
 
