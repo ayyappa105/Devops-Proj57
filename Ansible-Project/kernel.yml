@@ -12,7 +12,16 @@
      ansible.builtin.debug:
        msg: OS version is {{ansible_distribution}}.{{ansible_distribution_version}} and kernal version is {{ansible_kernel}}
       
-   
+   - name: checking kernel updates
+     ansible.builtin.yum:
+       list: updates
+     register: yumoutput
+
+   - name: Listing the yum updates
+     ansible.builtin.debug:
+       msg: "{{ yumoutput | json_query(my_query) }}"
+     vars:
+       my_query: "results[].{name: name, repo: repo, version: version}"
 
    - name: checking kernel updates
      ansible.builtin.yum:
@@ -28,7 +37,7 @@
 
    - name: Current packages are getting installing
      ansible.builtin.debug:
-       msg: Kernal updates are getting installing {{package_result.results| lsit }}
+       msg: Kernal updates are getting installing {{package_result.results| list: }}
     
    
 
