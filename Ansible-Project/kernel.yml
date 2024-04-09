@@ -4,4 +4,4 @@
   tasks:
    - name: kernal version
      ansible.builtin.debug:
-       msg: "{{ansible_kernal}}"
+       msg: "{{ansible_kernel}}"
