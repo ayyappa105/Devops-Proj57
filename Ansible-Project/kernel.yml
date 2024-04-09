@@ -30,9 +30,9 @@
      when: update_confirmation == "y"
      register: package_result
 
-   - name: Current packages are getting installing
-     ansible.builtin.debug:
-       msg: Kernal updates are getting installing {{ package_result.results }}
+   #- name: Current packages are getting installing
+     #ansible.builtin.debug:
+      # msg: Kernal updates are getting installing {{package_result.results}}
     
    
 
