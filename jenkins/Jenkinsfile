@@ -1,17 +1,17 @@
 pipeline{
     agent any
     stages{
-        stage (First stage) {
+        stage(First stage) {
            steps{
             echo "Welcome to jenkins pipeline"
            }       
         }
-        stage (Second stage) {
+        stage(Second stage) {
            steps{
             echo " this is Second stage"
            }
         }
-        stage (Third stage) {
+        stage(Third stage) {
            steps{
             echo "this is third stage"
            }
